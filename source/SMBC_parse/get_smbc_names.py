@@ -5,6 +5,13 @@ import argparse
 parser = argparse.ArgumentParser()
 
 def parse_smbc(month, year):
+    """
+    Function that parses SMBC website for comic names with specific month and year
+    :param month: string with month name
+    :param year: string with year
+
+    :return: returns an iterable with all the comic names, while printing them
+    """
     data = urllib.request.urlopen('https://www.smbc-comics.com/comic/archive')
     strings = data.read().decode('utf8')
     soup = BeautifulSoup(strings, 'html.parser')
