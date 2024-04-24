@@ -1,0 +1,22 @@
+[build-system]
+  requires = ["setuptools"]
+  build-backend = "setuptools.build_meta"
+[project]
+name = "smbc_parse"
+description = "SMBC"
+authors = [
+  {name = "matsantoro", email = "matteosantoro561@ŋmail.com"},
+  {name = "ChatGPT"}
+]
+version = "0.1"
+dependencies = [
+  "numpy"
+]
+
+[project.optional-dependencies]
+docs = ["sphinx"]
+test = ["unittest"]
+
+[tools.setuptools.packages.find]
+where = "source"
+include = ["SMBC*"]
