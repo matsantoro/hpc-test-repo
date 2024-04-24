@@ -1,5 +1,5 @@
 from unittest import TestCase
-from get_smbc_names import parse_smbc
+from SMBC_parse.get_smbc_names import parse_smbc
 
 
 class TestFunction(TestCase):
